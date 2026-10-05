@@ -19,3 +19,6 @@ fabricate) won.
 - `make_signature.py` checks glyph coverage by reading the font's `cmap` table with `struct`, since Pillow cannot report missing glyphs and fontTools is outside the allowed dependencies.
 - `make_signature.py` renders with Pillow's BASIC layout engine so the PNG is byte-identical whether or not libraqm is installed; Great Vibes connects letters without OpenType shaping.
 - `make_signature.py` rejects `--height` below 300 px instead of silently raising it, so the user sees why.
+- The keyword map's coverage table is the machine-readable contract between the drafter and `ats_check.py`; `style_resume.md` fixes its column shape instead of inventing a second format.
+- The profile template fixes simple Markdown shapes (`### Title` + `- Dates:` lines, a `| Item | Level |` table, bold gap bullets) so `ats_check.py --profile` can verify titles, dates, and skills without a YAML dependency.
+- Profile conflicts between two old resumes go to an "Open conflicts" section and a question, never a silent pick, per section 7.
