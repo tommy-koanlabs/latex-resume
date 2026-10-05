@@ -8,3 +8,10 @@ fabricate) won.
 - `build.py` sets `SOURCE_DATE_EPOCH` only for the shipped examples, so rebuilding them gives identical bytes; user builds keep real timestamps, and `\today` is never frozen.
 - `build.py` fails a resume over two pages and a cover letter over one page even without `--pages`, because those limits are hard rules in the brief.
 - `build.py` exposes the classes through `TEXINPUTS` for pdfLaTeX and `-Z search-path` for tectonic instead of copying them, so a user's folder never collects stale class copies.
+- `ats_check.py` matches keywords on normalized tokens (case, punctuation, `&`/and, plurals, `(s)`, small stopwords) rather than raw bytes, so "Bills of Materials (BOMs)" satisfies "Bill of Materials (BOM)"; byte-exact matching would fail honest resumes on grammar alone.
+- A mapped keyword that is only partly present is a WARN, not a FAIL. Forcing every posting phrase verbatim would push the drafter to reword real work into the posting's words even when it is not the same thing (rule 3.9); the example itself says "frames" where the posting says "fixtures", because that is what John analyzed.
+- A keyword row whose "Where it lands" cell starts with "Not on resume" is skipped, which is how the example map handles citizenship (stated in the cover letter, not the resume).
+- Without `--profile`, a Skills item with no bullet behind it is a WARN, because the script cannot see the confirming profile line; with `--profile` it is a FAIL. An exposure-level tool must also have a bullet stating its narrow use, which enforces rule 3.3.
+- `ats_check.py` adds checks the brief implies but does not list: no em dashes, no clearance-eligibility wording on the resume (rule 3.5), fonts embedded with Unicode maps (the example map lists it), and any confirmed gap from the profile appearing on the resume.
+- Allowed section headings are the template's plus "Certifications" and "Licenses & Certifications", because a licensed engineer (PE) needs somewhere exact to put the license.
+- `ats_check.py --letter` implements verification step 8 for cover letters and confirms a signature image is embedded.
