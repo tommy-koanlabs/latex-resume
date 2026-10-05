@@ -25,6 +25,7 @@ __pycache__/
 
 # ---- skill packaging and eval runs ----
 *.skill
+!/resume-tailor.skill
 *-workspace/
 
 # ---- OS / editor ----

@@ -19,8 +19,9 @@ real person.
 
 ## Install on Claude.ai
 
-1. Download `resume-tailor.skill` from this repository's releases, or build it
-   yourself (see "Build the package" below).
+1. Download `resume-tailor.skill` from the top folder of this repository (open
+   the file on GitHub and click the download button), or build it yourself
+   (see "Build the package" below).
 2. In Claude.ai, open **Settings > Capabilities** and make sure code
    execution is on.
 3. In the same Capabilities area, find **Skills**, choose to upload a skill,
@@ -106,7 +107,9 @@ python evals/check_outputs.py <eval id> <outputs folder>
 python package.py
 ```
 
-This writes `resume-tailor.skill` in the repository folder.
+This writes `resume-tailor.skill` in the repository folder. The committed copy
+is what people download, so rerun this and commit the result after any change
+under `skill/`.
 
 `CLAUDE.md` is the build brief, `DECISIONS.md` records the judgment calls made
 while building, and `evals/` holds the eval prompts and fictional fixtures.
