@@ -1,0 +1,61 @@
+FICTIONAL EVAL FIXTURE. Fictional posting from a fictional company. Used by
+eval 2: same candidate as the example, different center of gravity (analysis
+instead of test equipment design).
+--------------------------------------------------------------------------------
+
+Job ID
+BRA-7731
+CLEARANCE REQUIRED FOR START: No
+CLEARANCE TYPE: Secret
+TRAVEL: Yes, 5% of the Time
+
+Senior Structural Analysis Engineer
+Brannock Aerostructures - Huntsville, AL (hybrid)
+
+Description
+Brannock Aerostructures designs and qualifies primary and secondary structure
+for missile and launch systems. The Stress and Loads group performs the
+analysis that proves our structure is safe to fly and test. We are looking for
+a Senior Structural Analysis Engineer to own stress analysis of metallic
+structure, fixtures, and ground support equipment from preliminary design
+through test correlation.
+
+Key Responsibilities:
+
+- Perform stress analysis of metallic structures, brackets, and ground support
+  equipment using finite element analysis (FEA) and classical hand
+  calculations
+- Build and run linear static, modal, and buckling finite element models in
+  MSC Nastran; pre- and post-process in Patran or HyperMesh
+- Calculate margins of safety and document results in formal stress reports
+  for internal and customer review
+- Perform fatigue and fracture mechanics analysis of welded and bolted joints
+- Perform bolted joint analysis, including preload and separation checks
+- Plan strain gauge instrumentation and correlate test data with analysis
+  predictions
+- Support design engineers with load path and sizing recommendations during
+  design reviews
+- Automate repetitive analysis tasks with Python or MATLAB
+
+Basic Qualifications:
+
+- Bachelor of Science in Mechanical, Aerospace, or Civil Engineering AND 5
+  years of related experience, OR a Master of Science AND 3 years
+- Experience with finite element analysis using MSC Nastran, ANSYS, or
+  Abaqus
+- Experience writing stress reports with margins of safety
+- Working knowledge of fatigue analysis
+- U.S. citizenship and the ability to obtain and maintain a DoD Secret
+  clearance
+
+Preferred Qualifications:
+
+- MS in Mechanical or Aerospace Engineering
+- Experience with HyperMesh or Patran
+- Experience with fracture mechanics tools such as NASGRO
+- Experience analyzing composite structures
+- Experience correlating analysis with strain gauge test data
+- Programming experience in Python or MATLAB
+- Active DoD Secret clearance
+
+Salary Range: $112,000 - $168,000

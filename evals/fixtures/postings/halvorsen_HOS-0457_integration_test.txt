@@ -1,0 +1,49 @@
+FICTIONAL EVAL FIXTURE. Fictional posting from a fictional company. Used by
+eval 4 with jane_roe/Roe_Resume_2023.pdf (no career profile).
+--------------------------------------------------------------------------------
+
+Job ID
+HOS-0457
+CLEARANCE REQUIRED FOR START: No
+CLEARANCE TYPE: Secret
+TRAVEL: Yes, 15% of the Time
+
+Spacecraft Integration and Test Engineer II
+Halvorsen Orbital Systems - Denver, CO (onsite)
+
+About the role
+Halvorsen Orbital Systems builds small satellite buses for government and
+commercial customers. Our Integration and Test (I&T) team takes flight units
+from first power-on through environmental testing and launch site support.
+
+Key Responsibilities:
+
+- Write and execute integration and test procedures for spacecraft avionics
+  and subsystems
+- Perform electrical integration of flight harnesses, including continuity,
+  isolation, and pin-to-pin checks
+- Support environmental testing including thermal vacuum (TVAC) and vibration
+- Develop automated test scripts in Python to command units and log telemetry
+- Troubleshoot anomalies, document nonconformances, and drive corrective action
+- Work with ground support equipment (GSE) and electrostatic discharge (ESD)
+  controls in a cleanroom
+
+Basic Qualifications:
+
+- Bachelor of Science in Electrical, Aerospace, or Computer Engineering AND 2
+  years of related experience
+- Hands-on experience with oscilloscopes, digital multimeters, and power
+  supplies
+- Experience with thermal vacuum (TVAC) testing of flight or flight-like
+  hardware
+- Experience writing test procedures
+- U.S. citizenship and the ability to obtain and maintain a DoD Secret
+  clearance
+
+Preferred Qualifications:
+
+- Experience with Python test automation
+- Experience with LabVIEW
+- Flight harness fabrication or J-STD-001 certification
+- Experience with spacecraft command and telemetry databases
+- Launch site support experience
