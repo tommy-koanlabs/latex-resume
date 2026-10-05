@@ -62,6 +62,12 @@ def numbered_questions(msg: str) -> int:
     return len(re.findall(r"^\s*\d+[.)]\s", msg, re.M))
 
 
+def question_items(msg: str) -> str:
+    """Text of the numbered items only (a closing note that names settled gaps is not a question)."""
+    items = re.findall(r"^\s*\d+[.)]\s.*?(?=^\s*\d+[.)]\s|^\s*$|\Z)", msg, re.M | re.S)
+    return "\n".join(items)
+
+
 def run_ats(c: Checks, pdf: Path, *extra: str, label: str) -> None:
     p = subprocess.run([sys.executable, str(SCRIPTS / "ats_check.py"), str(pdf), *extra],
                        capture_output=True, text=True)
@@ -152,7 +158,7 @@ def eval3(c: Checks, out: Path, _b) -> None:
         c(re.search(r"oscilloscopes, power\s+supplies, and\s+multimeters", q, re.I) is not None,
           "a question quotes the bench test equipment line")
         c(re.search(r"Acceptance Test Procedures|ATPs", q) is not None, "a question quotes the ATP line")
-        absent(c, q, ["Teamcenter", "LabVIEW"], "no question about already confirmed gaps")
+        absent(c, question_items(q), ["Teamcenter", "LabVIEW"], "no question about already confirmed gaps")
     pdf = common_resume(c, out, PROFILE_THIN)
     if pdf:
         absent(c, text_of(pdf), [r"oscilloscope", r"multimeter", r"power suppl", r"acceptance test procedure",
