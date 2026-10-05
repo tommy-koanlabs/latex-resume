@@ -29,3 +29,5 @@ fabricate) won.
 - `.gitignore` now allows `career_profile.md` and PDFs under `evals/fixtures/` only, since those are fictional fixtures; the blanket rules still protect a user's real files everywhere else.
 - Evals 1 and 5 were run in this session by the author following SKILL.md, not by an independent agent; they prove the scripts and fixtures work end to end but are biased as a test of the instructions. Evals 2 to 4 still need independent runs.
 - During eval 5 the draft letter gained an invented detail ("no drawing changes"). No script can catch that, so SKILL.md and style_coverletter.md now require a sentence-by-sentence source check before building a letter (fix the skill, not the evals).
+- README describes the Claude.ai upload path loosely and points to the help center, because menu names change faster than this repo.
+- `package.py` lives at the repo root (not in `skill/`) and writes the zip with `resume-tailor/` as its top folder, since the repo folder is named `skill/` but the installed folder must match the skill name. Output validated with skill-creator's `quick_validate`.
