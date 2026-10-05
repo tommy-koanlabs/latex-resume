@@ -70,7 +70,14 @@ out from the dates.
 
 ## 5. Technical Skills
 
-- Five to seven lines, each `\skill{Label}{item, item, item}`.
+- Five to seven lines, each `\skill{Label}{item, item, item}`. Each line
+  fits on one printed line; check the rendered page. A wrapped line turns a
+  six-line section into nine, pushes roles across the page break, and reads
+  as a keyword dump. Fix a wrap by dropping the line's weakest item or by
+  splitting the category, not by shrinking anything.
+- Build lines only from real tools, methods, and standards. On thin material,
+  five honest lines beat a padded sixth; never invent a category of soft
+  items ("Technician Training") just to reach the count.
 - Rename and reorder categories for every posting so the first line is the
   posting's center of gravity.
 - Name a tool once, at the level a recruiter searches for ("PTC Creo"). List

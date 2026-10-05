@@ -238,7 +238,11 @@ Rules:
 
 1. Ask before drafting, in one batch, at most five questions, basic
    qualifications first. Skip preferred items plainly outside the user's
-   field.
+   field. One topic per question: folding three topics into one numbered
+   item keeps the count at five but makes the user write an essay, and the
+   buried parts get skipped. When more than five topics qualify, ask the five
+   that weigh most and say in one line which remaining items you will treat
+   as gaps unless the user tells you otherwise.
 2. Quote the posting line each question comes from. Ask for evidence, not a
    yes or no: where, what the user personally did, which tools, any measured
    result.

@@ -31,3 +31,6 @@ fabricate) won.
 - During eval 5 the draft letter gained an invented detail ("no drawing changes"). No script can catch that, so SKILL.md and style_coverletter.md now require a sentence-by-sentence source check before building a letter (fix the skill, not the evals).
 - README describes the Claude.ai upload path loosely and points to the help center, because menu names change faster than this repo.
 - `package.py` lives at the repo root (not in `skill/`) and writes the zip with `resume-tailor/` as its top folder, since the repo folder is named `skill/` but the installed folder must match the skill name. Output validated with skill-creator's `quick_validate`.
+- Evals 3 and 4 were run in two turns: the agent returned its questions before seeing the scripted answers, so the questions could not be tailored to answers it had already read.
+- In eval 4 the user was not asked about her current role, which the script did not anticipate. The reply "still there, same title, nothing new" kept the fixture's facts unchanged.
+- Skills lines must fit one printed line, and no soft categories may be invented to reach five lines (findings from evals 1 to 4). The brief's five-to-seven count stays as the target.
