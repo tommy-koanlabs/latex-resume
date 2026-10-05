@@ -1,0 +1,34 @@
+# ---- a user's real material must never be committed ----
+private/
+sources/
+applications/
+career_profile.md
+/signature.png
+*.docx
+
+# ---- LaTeX build products ----
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+# PDFs are ignored everywhere except the shipped examples
+*.pdf
+!skill/references/examples/*.pdf
+
+# ---- Python ----
+__pycache__/
+*.pyc
+.venv/
+
+# ---- skill packaging and eval runs ----
+*.skill
+*-workspace/
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
