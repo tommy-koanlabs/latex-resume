@@ -1,0 +1,78 @@
+%% resume_template.tex -- starting point for every tailored resume.
+%% Copy, rename to  Lastname_Company_RoleShort_ReqID.tex , fill, compile with
+%% pdfLaTeX. Needs resume.cls beside it (or on TEXINPUTS).
+%%
+%% Angle-bracket text is placeholder. Nothing in angle brackets may survive
+%% into a delivered file. Every claim must trace to the career profile.
+\documentclass{resume}
+
+% ---------- page-fit knobs (defaults shown; tighten in this order) ----------
+% \setlength{\resitemsep}{2pt}     % 2pt -> 1pt -> 0pt
+% \setlength{\resrolegap}{7pt}     % 7pt -> 5pt
+% \setlength{\ressecbefore}{10pt}  % 10pt -> 8pt
+% Never touch font size or margins. After the knobs, cut the weakest bullet.
+
+\name{<First Last>}
+% Separate items with \sep. City is optional. Anything else (citizenship, an
+% active clearance, a portfolio link) is added as one more \sep item, and only
+% when the user's profile says to show it.
+\contact{<City, ST> \sep \href{mailto:<email>}{<email>} \sep <(000) 000-0000>}
+
+\begin{document}
+\makeheader
+
+% Three sentences, no first person, no years-of-experience count.
+% 1) identity noun phrase that mirrors the posting's discipline
+% 2) what the candidate delivers, in the posting's vocabulary
+% 3) the differentiating background
+\section*{Professional Summary}
+<Summary.>
+
+% 5 to 7 lines. Rename and reorder the categories for each posting so line 1
+% is the posting's center of gravity. Every item needs evidence in a bullet
+% below or a confirmed line in the career profile.
+\section*{Technical Skills}
+\skill{<Category>}{<Item, Item, Item>}
+\skill{<Category>}{<Item, Item, Item>}
+
+% Reverse chronological, always. Shift emphasis with bullet count and bullet
+% order, never by reordering jobs. Titles are verbatim from the profile.
+\section*{Professional Experience}
+\role{<Official Title>}{<Month YYYY> -- Present}
+     {<Employer (context if needed)> -- <City, ST>}
+\begin{itemize}
+  \item <Action verb + what + how (tools, standards) + result. Present tense for ongoing duties, past tense for finished projects.>
+  \item <Most posting-relevant bullets first.>
+\end{itemize}
+
+% Put \pagebreak between roles when a role would otherwise split across pages.
+% \pagebreak
+
+\role{<Official Title>}{<Month YYYY> -- <Month YYYY>}
+     {<Employer> -- <City, ST>}
+\begin{itemize}
+  \item <Past tense.>
+\end{itemize}
+
+\section*{Education}
+\degree{<M.S. Field, GPA: 0.00>}{<Month YYYY>}
+       {<University>}
+       {<Thesis: Title>}
+\degree{<B.S. Field, GPA: 0.00 (Honors)>}{<Month YYYY>}
+       {<University>}
+       {}
+
+% Use "Publications" only if every entry is a paper. If any entry is a
+% poster, talk, or report, title the section "Publications \& Presentations"
+% and tag that entry, e.g. (Poster).
+\section*{Publications \& Presentations}
+\publication{<Title>}
+            {<Venue, Year>}
+
+% One form for the whole section: every project followed by a plain line, or
+% every project followed by an itemize. Never mix.
+\section*{Projects}
+\project{<Project Title>}{<Context or award>}
+<One-line description.>
+
+\end{document}

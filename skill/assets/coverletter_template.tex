@@ -1,0 +1,50 @@
+%% coverletter_template.tex -- starting point for every cover letter.
+%% Copy, rename to  Lastname_Company_RoleShort_ReqID_CoverLetter.tex , fill,
+%% compile with pdfLaTeX. Needs coverletter.cls beside it (or on TEXINPUTS)
+%% and, for the script signature, signature.png beside it
+%% (scripts/make_signature.py makes one). No signature.png = typed name.
+%%
+%% Angle-bracket text is placeholder. One page, always.
+\documentclass{coverletter}
+% \documentclass[typedname]{coverletter}   % also print the typed name under the signature
+
+\name{<First Last>}
+% \letterdate{<Month D, YYYY>}             % defaults to today's date
+\contactline{<Street Address>}             % optional line
+\contactline{<City, ST ZIP>}
+\contactline{\href{mailto:<email>}{<email>}}
+\contactline{<(000) 000-0000>}
+\recipient{<Company> \\
+           <City, ST> \\
+           <Position Title (Req ID)>}
+
+\begin{document}
+\makeheader
+\opening{Dear Hiring Manager:}
+
+% Voice rules (full list in references/style_coverletter.md):
+%   plain first person, light and personable, sounds like an engineer wrote it
+%   no em dashes, no colons or semicolons inside the body
+%   no flattery of the company, no mission-statement echo
+%   hard facts live in the resume; pick one or two and tell them as a story
+%   every fact must already be in the resume or the career profile
+
+% P1: the role, who you are in one line, one human sentence about how you work.
+<Paragraph 1.>
+
+% P2: one concrete project from the resume that mirrors the posting's core work.
+<Paragraph 2.>
+
+% P3: name the honest gaps against the posting and bridge each one in a
+% sentence or two. Drop this paragraph only if there are no real gaps, and
+% use the space for a second relevant strength instead.
+<Paragraph 3.>
+
+% P4: people skills, logistics the posting asks about (citizenship, travel,
+% clearance eligibility, relocation), and a plain invitation to talk.
+<Paragraph 4.>
+
+Thank you for your consideration. Please do not hesitate to contact me if you have any questions.
+
+\closing{Sincerely,}
+\end{document}

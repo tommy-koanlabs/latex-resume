@@ -1,0 +1,78 @@
+%% EXAMPLE OUTPUT -- every person, employer, school, venue, and project here
+%% is fictional. Tailored to examples/job_posting.txt; see keyword_map.md for
+%% how each line traces to the posting.
+%%
+%% Condensed on purpose so it reads quickly as a sample. Copy its format,
+%% voice, and keyword tracing, not its length. A real resume for a candidate
+%% at this level carries more bullets and fills two pages.
+\documentclass{resume}
+
+\name{John Doe}
+\contact{Huntsville, AL \sep \href{mailto:john.doe@example.com}{john.doe@example.com} \sep (256) 867-5309}
+
+\begin{document}
+\makeheader
+
+\section*{Professional Summary}
+Mechanical design engineer specializing in test stations, test fixtures, and laboratory systems for aerospace test and evaluation. Takes test equipment from concept through fabrication, integration, and acceptance testing. Background in structural analysis and mechanical testing informs designs that are ready to build and qualify.
+
+\section*{Technical Skills}
+\skill{Test \& Evaluation}{Test Station Design, Test Fixture Design, Acceptance Test Procedures (ATP)}
+\skill{Design Tools}{PTC Creo, Siemens NX, AutoCAD}
+\skill{Documentation}{Engineering Drawings, GD\&T (ASME Y14.5), Bill of Materials (BOM), Windchill PLM}
+\skill{Test Equipment}{Data Acquisition (DAQ), Oscilloscopes, Power Supplies, Multimeters, Strain Gauges}
+\skill{Analysis \& Manufacturing}{ANSYS, Nastran, Design for Manufacturing, Manufacturing Liaison}
+
+\section*{Professional Experience}
+\role{Senior Mechanical Design Engineer}{August 2020 -- Present}
+     {Veridane Technical Services (Government Test Center Contract) -- Huntsville, AL}
+\begin{itemize}
+  \item Serve as primary design engineer for a component test laboratory, designing test stations, test fixtures, and laboratory systems from concept through fabrication, integration, and checkout
+  \item Produce solid models, assemblies, and detailed engineering drawings in PTC Creo with GD\&T per ASME Y14.5; maintain bills of materials (BOMs) and release through Windchill PLM configuration management
+  \item Led redesign of a legacy valve test station, including its pneumatic and fluid systems per ASME B31.3, achieving a 22\% weight reduction
+  \item Developed and executed acceptance test procedures (ATPs) for new and modified test stations
+  \item Integrate instrumentation and data acquisition (DAQ) hardware into test stations, verifying sensor signals with oscilloscopes, power supplies, and multimeters
+  \item Coordinate with a multi-discipline team including supply chain, operations, and quality assurance, and provide manufacturing liaison support during fabrication, assembly, and installation
+  \item Mentor junior engineers on drawing practices and GD\&T
+\end{itemize}
+
+\role{Mechanical Engineer -- Structural Design \& Analysis}{June 2017 -- July 2020}
+     {Korvath Industrial Systems -- Huntsville, AL}
+\begin{itemize}
+  \item Designed welded and bolted structural frames and enclosures, applying GD\&T to engineering drawings
+  \item Performed structural analysis of frames and support structure in ANSYS and Nastran; prepared geometry in Siemens NX for meshing
+  \item Resolved recurring fatigue cracking in a production bracket by redesigning the load path and validating the fix with strain gauge testing
+  \item Automated recurring design calculations with Python, reducing analysis turnaround time by 25\%
+\end{itemize}
+
+\role{Mechanical Test Technician (Co-op)}{May 2015 -- May 2017}
+     {Pellmont Materials Laboratory -- Huntsville, AL}
+\begin{itemize}
+  \item Executed mechanical testing programs per ASTM standards and designed custom test fixtures, building a working knowledge of test engineering concepts
+\end{itemize}
+
+% Explicit break so the Education heading is not stranded at the foot of page 1.
+\pagebreak
+
+\section*{Education}
+\degree{M.S. Mechanical Engineering, GPA: 3.80}{December 2019}
+       {Carroway State University}
+       {Thesis: Fatigue of Preloaded Bolted Joints}
+\degree{B.S. Mechanical Engineering, GPA: 3.70 (Magna Cum Laude)}{May 2017}
+       {Carroway State University}
+       {Engineering Honor Society, Dean's List}
+
+\section*{Publications \& Presentations}
+\publication{Modular Valve Test Station Design for Leak-Rate Measurement}
+            {Aerospace Test \& Evaluation Conference, 2024}
+\publication{Thermal Chamber Fixture Design for Sensor Qualification}
+            {Regional Test \& Measurement Workshop, 2023 (Poster)}
+
+\section*{Projects}
+\project{Microcontroller Data Logger}{Personal Project}
+Designed and debugged a custom circuit board using an oscilloscope, bench power supply, and logic analyzer
+
+\project{Senior Capstone: Automated Tensile Test Fixture}{First Place, College of Engineering Design Showcase}
+Led mechanical design of a fixture that loads and aligns test specimens automatically
+
+\end{document}
