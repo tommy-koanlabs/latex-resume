@@ -87,5 +87,8 @@ python scripts/ats_check.py <letter>.pdf --letter
 ```
 
 One page, no em dash, no colon or semicolon in the body, signature image
-present. Then reread it once for flattery and for any fact not in the resume
-or profile.
+present. The script cannot check facts, so also go sentence by sentence and
+name the resume or profile line behind each fact. Delete any sentence that has
+none. Story details added for color ("it went together with no drawing
+changes") are the usual offenders: they read as harmless and they are exactly
+what an interviewer asks about. Then reread once for flattery.

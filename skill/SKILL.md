@@ -282,8 +282,12 @@ finished resume and its keyword map.
    the keyword map named plainly and bridged; people skills, logistics the
    posting asks about, and an invitation to talk. Then the standard two-sentence
    thank-you and "Sincerely,".
-4. Every fact is already in the resume or profile. No em dashes, no colons or
-   semicolons in the body, no flattery of the company.
+4. Every fact is already in the resume or profile. Before building, go through
+   the letter sentence by sentence and name the resume or profile line behind
+   each fact; delete any sentence with none. The risky ones are vivid details
+   added to make the story land ("it went together with no drawing changes"):
+   they feel harmless and are exactly what an interviewer asks about. No em
+   dashes, no colons or semicolons in the body, no flattery of the company.
 5. Build and check:
    `python scripts/build.py <letter>.tex` then
    `python scripts/ats_check.py <letter>.pdf --letter`. One page, always.

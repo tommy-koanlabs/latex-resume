@@ -27,3 +27,5 @@ fabricate) won.
 - The thin profile for eval 3 keeps the old vague "Co-author test procedures" bullet at level `?` instead of deleting it, which is how real old resumes look and is what should trigger the ATP question.
 - Eval 4 uses a second fictional person (Jane Roe, electrical I&T) to prove the workflow is not mechanical-engineering specific. Her old resume carries deliberate flaws (vague verbs, unbacked skills, a years count, a 3.40 GPA) that the skill must drop or ask about.
 - `.gitignore` now allows `career_profile.md` and PDFs under `evals/fixtures/` only, since those are fictional fixtures; the blanket rules still protect a user's real files everywhere else.
+- Evals 1 and 5 were run in this session by the author following SKILL.md, not by an independent agent; they prove the scripts and fixtures work end to end but are biased as a test of the instructions. Evals 2 to 4 still need independent runs.
+- During eval 5 the draft letter gained an invented detail ("no drawing changes"). No script can catch that, so SKILL.md and style_coverletter.md now require a sentence-by-sentence source check before building a letter (fix the skill, not the evals).
