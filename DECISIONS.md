@@ -15,3 +15,7 @@ fabricate) won.
 - `ats_check.py` adds checks the brief implies but does not list: no em dashes, no clearance-eligibility wording on the resume (rule 3.5), fonts embedded with Unicode maps (the example map lists it), and any confirmed gap from the profile appearing on the resume.
 - Allowed section headings are the template's plus "Certifications" and "Licenses & Certifications", because a licensed engineer (PE) needs somewhere exact to put the license.
 - `ats_check.py --letter` implements verification step 8 for cover letters and confirms a signature image is embedded.
+- Bundled Great Vibes (OFL) as the one signature font, because the stand-in example already used it and switching would change the example letter's look.
+- `make_signature.py` checks glyph coverage by reading the font's `cmap` table with `struct`, since Pillow cannot report missing glyphs and fontTools is outside the allowed dependencies.
+- `make_signature.py` renders with Pillow's BASIC layout engine so the PNG is byte-identical whether or not libraqm is installed; Great Vibes connects letters without OpenType shaping.
+- `make_signature.py` rejects `--height` below 300 px instead of silently raising it, so the user sees why.
