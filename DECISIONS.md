@@ -22,3 +22,8 @@ fabricate) won.
 - The keyword map's coverage table is the machine-readable contract between the drafter and `ats_check.py`; `style_resume.md` fixes its column shape instead of inventing a second format.
 - The profile template fixes simple Markdown shapes (`### Title` + `- Dates:` lines, a `| Item | Level |` table, bold gap bullets) so `ats_check.py --profile` can verify titles, dates, and skills without a YAML dependency.
 - Profile conflicts between two old resumes go to an "Open conflicts" section and a question, never a silent pick, per section 7.
+- `evals/evals.json` uses the skill-creator field `expectations`, adds a `name` per eval, and gives file paths relative to the repo root because the fixtures live outside `skill/` so they never ship in the package.
+- Multi-turn evals (3, 4, 5) carry the simulated user's replies inside the prompt, so a runner can answer the skill's questions without a human.
+- The thin profile for eval 3 keeps the old vague "Co-author test procedures" bullet at level `?` instead of deleting it, which is how real old resumes look and is what should trigger the ATP question.
+- Eval 4 uses a second fictional person (Jane Roe, electrical I&T) to prove the workflow is not mechanical-engineering specific. Her old resume carries deliberate flaws (vague verbs, unbacked skills, a years count, a 3.40 GPA) that the skill must drop or ask about.
+- `.gitignore` now allows `career_profile.md` and PDFs under `evals/fixtures/` only, since those are fictional fixtures; the blanket rules still protect a user's real files everywhere else.

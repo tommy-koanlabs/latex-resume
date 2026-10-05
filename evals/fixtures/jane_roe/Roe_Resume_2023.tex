@@ -1,0 +1,55 @@
+%% FICTIONAL EVAL FIXTURE for eval 4: an old, untailored resume from a
+%% fictional person, with the flaws real old resumes have (vague verbs, skills
+%% with no bullet behind them, a years count, a low GPA shown). Every person,
+%% employer, and school here is fictional. Built with plain article on purpose:
+%% it is not the skill's output.
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist{nosep,leftmargin=14pt}
+
+\begin{document}
+{\Large\bfseries Jane Roe}\\
+Boulder, CO \textbar{} jane.roe@example.com \textbar{} (303) 555-0142
+
+\medskip
+\textbf{SUMMARY}\\
+Electrical engineer with 2+ years of experience in avionics testing. Hard
+working team player who is passionate about space.
+
+\medskip
+\textbf{SKILLS}\\
+Oscilloscope, DMM, power supplies, Python, LabVIEW, Altium, soldering,
+test procedures, environmental testing
+
+\medskip
+\textbf{EXPERIENCE}
+
+\textbf{Test Engineer I}, Aldermoor Avionics, Boulder, CO \hfill June 2021 -- Present
+\begin{itemize}
+  \item Supported environmental testing of avionics boxes for a satellite program
+  \item Ran functional test procedures on flight and engineering units
+  \item Debugged power board faults on the bench with an oscilloscope, DMM, and bench power supply
+  \item Built and checked test cables and breakout boxes for the test lab
+  \item Involved in nonconformance reports and failure investigations
+  \item Trained two new technicians on the test stations
+\end{itemize}
+
+\textbf{Electrical Engineering Intern}, Pinecrest Power Systems, Longmont, CO \hfill May 2020 -- August 2020
+\begin{itemize}
+  \item Designed a small DC-DC converter evaluation board in Altium and brought it up on the bench
+  \item Helped with efficiency testing of power converters
+\end{itemize}
+
+\medskip
+\textbf{EDUCATION}\\
+B.S. Electrical Engineering, Ridgeline State University, May 2021, GPA 3.40
+
+\medskip
+\textbf{PROJECTS}\\
+CubeSat Club power subsystem lead (2019--2021): designed the EPS board for a
+student 1U CubeSat that passed a thermal vacuum test at the university.
+\end{document}

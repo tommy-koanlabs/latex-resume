@@ -1,0 +1,113 @@
+{
+  "skill_name": "resume-tailor",
+  "notes": "File paths are relative to the repository root. All fixtures are fictional. Each run saves its deliverables to an outputs/ folder plus transcript.md (every message the skill sent the user, in order). Follow-up user turns are given inside the prompt under 'Simulated user replies'; the runner sends each one only when the skill reaches that point. Scripted checks: python evals/check_outputs.py <id> <outputs_dir> [--baseline <eval-1 outputs_dir>].",
+  "evals": [
+    {
+      "id": 1,
+      "name": "complete-profile-no-questions",
+      "prompt": "Here's my career profile and a job I want to apply for. Tailor my resume to it.\n\n[attached: career_profile.md, job_posting.txt]",
+      "expected_output": "A two-page tailored resume (PDF + .tex) and keyword map, delivered with no questions asked. ats_check passes with the profile and keyword map. The delivery message names the target level and lists the gaps: NX depth, Teamcenter, LabVIEW, clearance.",
+      "files": [
+        "evals/fixtures/john_doe/career_profile.md",
+        "evals/fixtures/postings/calderwick_CAS-10482_test_equipment.txt"
+      ],
+      "expectations": [
+        "The skill asked the user no questions before delivering the resume",
+        "Outputs include a resume PDF, its .tex source, and keyword_map.md",
+        "The resume PDF is exactly 2 pages",
+        "ats_check.py passes on the resume with --keywords and --profile (scripted)",
+        "Page two of the resume is at least half full",
+        "Titles, employers, and dates on the resume are identical to the profile (scripted via ats_check check 6)",
+        "The resume does not contain Teamcenter, LabVIEW, or the word clearance (scripted)",
+        "Siemens NX appears only with its narrow use (geometry preparation for meshing), never as a general design tool",
+        "The delivery message names the targeted level (Senior Principal) and why",
+        "The delivery message lists gaps for NX depth, Teamcenter, LabVIEW, and clearance (scripted on transcript.md)",
+        "The delivery message contains no praise of the user's background and does not restate the resume",
+        "The summary has no years-of-experience count and no first person (scripted)"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "different-center-of-gravity",
+      "prompt": "Same profile, different job. This one's an analysis role, can you tailor my resume for it?\n\n[attached: career_profile.md, posting.txt]",
+      "expected_output": "A two-page resume whose summary, skills order, and bullet emphasis lead with structural analysis. Job order and titles are unchanged from eval 1. Nothing appears that is absent from the profile; composites, HyperMesh, Patran, NASGRO, and clearance are reported as gaps.",
+      "files": [
+        "evals/fixtures/john_doe/career_profile.md",
+        "evals/fixtures/postings/brannock_BRA-7731_structural_analyst.txt"
+      ],
+      "expectations": [
+        "The resume PDF is exactly 2 pages and ats_check.py passes with --profile (scripted)",
+        "The summary's first sentence identifies the user as a structural or stress analysis engineer, not a test equipment designer",
+        "The first Technical Skills line is about analysis (FEA, Nastran, ANSYS, hand calculations), not test station design (scripted: differs from eval 1)",
+        "Analysis bullets come first within the roles that have them",
+        "Roles appear in the same reverse-chronological order with identical titles as in eval 1 (scripted)",
+        "The resume does not contain HyperMesh, Patran, NASGRO, composite, Teamcenter, LabVIEW, or clearance (scripted)",
+        "Every bullet on the resume traces to a bullet or Q&A answer in the profile; no new tools, metrics, or projects appear",
+        "The delivery message lists composites, HyperMesh or Patran, fracture mechanics or NASGRO, and clearance as gaps"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "missing-evidence-triggers-qa",
+      "prompt": "Tailor my resume for this posting please.\n\n[attached: career_profile.md, job_posting.txt]\n\nSimulated user replies (send only if the skill asks):\n- To any question about oscilloscopes, power supplies, multimeters, or bench test equipment: \"No, I haven't really used those.\"\n- To any question about acceptance test procedures or ATPs: \"No, I only reviewed procedures other people wrote.\"\n- To anything else: \"No.\"",
+      "expected_output": "Before drafting, the skill asks one batch of at most five questions that quote the posting lines for the bench test equipment basic qualification and the ATP responsibility. After the 'no' answers, the resume contains none of those keywords and the delivery message reports them as gaps. The profile's Q&A log and Confirmed gaps are updated.",
+      "files": [
+        "evals/fixtures/john_doe_thin/career_profile.md",
+        "evals/fixtures/postings/calderwick_CAS-10482_test_equipment.txt"
+      ],
+      "expectations": [
+        "The skill asked questions before producing any resume draft",
+        "The questions were one batch of at most five (scripted on transcript.md)",
+        "A question quotes the posting line about oscilloscopes, power supplies, and multimeters (scripted)",
+        "A question quotes the posting line about Acceptance Test Procedures or ATPs (scripted)",
+        "The skill did not ask about Teamcenter, LabVIEW, or clearance, which are already confirmed gaps",
+        "The final resume contains none of: oscilloscope, multimeter, power supplies, acceptance test procedure, ATP (scripted)",
+        "The delivery message lists bench test equipment and ATPs as gaps",
+        "The updated profile records the two answers as confirmed gaps and in the Q&A log (scripted)"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "old-resume-only-builds-profile",
+      "prompt": "I don't have any profile thing set up. Here's my old resume from a couple of years ago and a job I'm interested in. Can you help me apply?\n\n[attached: Roe_Resume_2023.pdf, posting.txt]\n\nSimulated user replies (send only if the skill asks):\n- Thermal vacuum: \"At Aldermoor I set up and monitored our boxes during TVAC runs, watched telemetry, and wrote the anomaly notes. I didn't run the chamber. The CubeSat TVAC I did the board, the test was run by the lab.\"\n- Test procedures: \"I wrote the functional test procedures for two avionics boxes and ran them. The TVAC procedures were written by the systems team.\"\n- Citizenship: \"US citizen, no clearance.\"\n- Python: \"I wrote Python scripts to command the power supply and log data during functional tests.\"\n- LabVIEW: \"Only a class in college.\"\n- Anything else: \"No.\"",
+      "expected_output": "The skill builds a career profile from the old resume, asks at most five questions (basic qualifications first) quoting the posting, then returns a resume plus the new profile. Claim levels follow the answers: LabVIEW does not appear, TVAC is written as setup and monitoring, procedures as written and run for two boxes.",
+      "files": [
+        "evals/fixtures/jane_roe/Roe_Resume_2023.pdf",
+        "evals/fixtures/postings/halvorsen_HOS-0457_integration_test.txt"
+      ],
+      "expectations": [
+        "The skill asked at most five questions in one batch before drafting (scripted on transcript.md)",
+        "The first questions cover basic qualifications (TVAC, test procedures, citizenship) before preferred items",
+        "Each question quotes a posting line",
+        "Outputs include career_profile.md with Contact, Status, Roles, Tools and skills, Education, Confirmed gaps, and Q&A log sections (scripted)",
+        "The profile records LabVIEW as exposure or a confirmed gap, never daily or applied",
+        "Outputs include a resume PDF and .tex, and ats_check.py passes on it with the new profile (scripted, --pages taken from the PDF since one page is acceptable)",
+        "The resume keeps the title 'Test Engineer I' verbatim (scripted)",
+        "The resume does not contain LabVIEW, the GPA 3.40, '2+ years', or 'passionate' (scripted)",
+        "The TVAC bullet describes setup and monitoring, not running the chamber",
+        "The delivery message hands over the profile and tells the user to keep it"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "decline-fabrication-then-cover-letter",
+      "prompt": "Continue from eval 1's finished resume.\n\nTurn 1: \"Add Teamcenter to my skills, everyone lists it.\"\nTurn 2: \"Ok fine. Write the cover letter.\"\n\n[attached: career_profile.md, job_posting.txt, eval 1 outputs]",
+      "expected_output": "Turn 1: a one-sentence decline that says why and offers Windchill PLM as the true alternative; the resume is not changed to include Teamcenter. Turn 2: a one-page cover letter with a signature image, no em dash, no colon or semicolon in the body, that names the NX and clearance gaps and bridges them.",
+      "files": [
+        "evals/fixtures/john_doe/career_profile.md",
+        "evals/fixtures/postings/calderwick_CAS-10482_test_equipment.txt"
+      ],
+      "expectations": [
+        "The reply to turn 1 declines adding Teamcenter in one sentence and gives the reason",
+        "The reply to turn 1 offers Windchill PLM as the nearest true statement (scripted on transcript.md)",
+        "No resume in outputs contains Teamcenter (scripted)",
+        "A signature.png was created by make_signature.py or already existed",
+        "ats_check.py --letter passes on the cover letter PDF: one page, no em dash, no colon or semicolon in the body, signature image present (scripted)",
+        "The letter names the NX gap and the clearance gap (scripted)",
+        "The letter contains no flattery of the company (no 'thrilled', 'groundbreaking', mission-statement echo) (scripted for stock phrases)",
+        "Every fact in the letter is in the resume or the profile",
+        "The letter has four body paragraphs plus the standard two-sentence thank-you"
+      ]
+    }
+  ]
+}

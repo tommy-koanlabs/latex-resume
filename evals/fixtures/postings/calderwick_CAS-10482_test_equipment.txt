@@ -1,0 +1,87 @@
+EXAMPLE INPUT. Fictional posting from a fictional company, written to look
+like a typical large aerospace/defense listing. This is what a user pastes in.
+--------------------------------------------------------------------------------
+
+Job ID
+CAS-10482
+RELOCATION ASSISTANCE: Relocation assistance may be available
+CLEARANCE REQUIRED FOR START: No
+CLEARANCE TYPE: Secret
+TRAVEL: Yes, 10% of the Time
+
+Principal / Senior Principal Mechanical Engineer - Test Equipment Design
+Calderwick Aerospace Systems - Huntsville, AL (onsite)
+
+Description
+Calderwick Aerospace Systems builds propulsion and fluid control hardware for
+launch vehicles and spacecraft. Our Test and Evaluation team designs and
+operates the test stations that prove that hardware before it flies. We are
+looking for a Principal / Senior Principal Mechanical Engineer to design the
+next generation of those test stations and the laboratory systems around them.
+
+This requisition may be filled at the Principal OR Senior Principal level based
+on the qualifications listed below.
+
+In this role you will take test equipment from a blank page to a station that
+technicians run every day. You will own the mechanical design, the drawing
+package, and the bill of materials, and you will stay with the build through
+fabrication, integration, and acceptance testing.
+
+Key Responsibilities:
+
+- Design test stations, test fixtures, and laboratory systems from concept
+  through fabrication, integration, and checkout
+- Produce solid models, assemblies, and detailed engineering drawings in
+  Siemens NX (or an equivalent 3D CAD tool), applying GD&T per ASME Y14.5
+- Create and maintain Bills of Materials (BOMs) and release design
+  documentation through Teamcenter PLM under configuration management
+- Develop and execute Acceptance Test Procedures (ATPs) for new and modified
+  test stations
+- Integrate instrumentation and data acquisition (DAQ) hardware into test
+  equipment
+- Design pneumatic and fluid systems for test stations in accordance with
+  ASME B31.3
+- Perform structural analysis of fixtures and support structure
+- Coordinate with a multi-discipline team (supply chain, operations, quality
+  assurance, manufacturing) to keep builds on schedule and within budget
+- Provide manufacturing liaison support during fabrication, assembly, and
+  installation
+- Mentor less experienced engineers and help document design best practices
+
+Basic Qualifications (Principal):
+
+- Bachelor of Science degree in a STEM discipline AND 5 years of related
+  experience, OR a Master of Science degree in a STEM discipline AND 3 years
+  of related experience
+- Experience with Siemens NX or another 3D mechanical design tool
+- Hands-on experience with test equipment such as oscilloscopes, power
+  supplies, and multimeters
+- Working knowledge of GD&T
+- Understanding of test engineering concepts
+- U.S. citizenship and the ability to obtain and maintain a DoD Secret
+  clearance
+
+Basic Qualifications (Senior Principal):
+
+- Bachelor of Science degree in a STEM discipline AND 8 years of related
+  experience, OR a Master of Science degree in a STEM discipline AND 6 years
+  of related experience
+- All other Principal-level basic qualifications
+
+Preferred Qualifications:
+
+- MS in Mechanical or Aerospace Engineering
+- Experience with test station design and development
+- Experience creating and maintaining BOMs
+- Experience developing and executing ATPs
+- Experience with Teamcenter
+- Experience with LabVIEW
+- Manufacturing liaison experience supporting build and installation of
+  assemblies
+- Active DoD Secret clearance
+
+We offer a 9/80 work schedule with every other Friday off, relocation
+assistance for qualified candidates, and a team that likes building things.
+
+Principal Salary Range: $95,000 - $142,000
+Senior Principal Salary Range: $118,000 - $177,000
